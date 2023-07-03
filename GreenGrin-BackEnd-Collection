@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "8ac53f94-2ece-44ff-bdfe-41d4d2597bd5",
+		"name": "GreenGrin-BackEnd-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll - Movimientos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById - Movimientos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movimientos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movimientos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert - Movimientos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Id_Estaciones\": 1,\r\n        \"Id_Usuario\": 1,\r\n        \"Fecha\": \"2023-01-01T00:00:00.000Z\",\r\n        \"CantBotellas\": 1,\r\n        \"Puntos\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - Movimientos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movimientos/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movimientos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById - Usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert - Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"Nombre\": \"Tami\",\r\n        \"Apellido\": \"Schnai\",\r\n        \"Nacionalidad\": \"Argentina\",\r\n        \"DNI\": 47026792,\r\n        \"FechaNacimiento\": \"2005-10-11T00:00:00.000Z\",\r\n        \"Contrasena\": \"hola123\",\r\n        \"Mail\": \"tami@gmail.com\",\r\n        \"Puntos\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateById - Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"Puntos\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoiY3VzdG9tIHBheWxvYWQiLCJ1c2VyRW1haWwiOiJmVUt2dHUwN1Y5REtYN2k0RkxAZXhhbXBsZS5jb20iLCJ1c2VyUGFzc3dvcmQiOiJmVUt2dHUwN1Y5REtYN2k0RkwxMjM0IiwiaWF0IjoxNjg4Mzg5NDE4LCJleHAiOjE2ODg0MjM5NzgsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0LyJdLCJpc3MiOiJodHRwOi8vR3JlZW5HcmluIiwic3ViIjoiZlVLdnR1MDdWOURLWDdpNEZMIn0.3CDE4L9MXWNW3pshM41YtXPEp_Z6PWNAayNLWfot9wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

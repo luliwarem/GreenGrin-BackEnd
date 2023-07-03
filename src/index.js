@@ -3,8 +3,8 @@ import cors from "cors";
 import passport from 'passport';
 import { jwtStrategy } from './common/jwt.strategy.js';
 import authRouter from "./controllers/authController.js"
-import movimientosRouter from "./controllers/movimientosController"
-import userRouter from "./controllers/userController"
+import movimientosRouter from "./controllers/movimientosController.js"
+import userRouter from "./controllers/userController.js"
 
 
 
